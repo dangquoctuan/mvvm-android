@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 
+import java.io.File;
+
 public class ShareUtil {
     /**
      * Open app in Google Play
@@ -27,7 +29,7 @@ public class ShareUtil {
         if (path == null || path.equals("")) return;
         Intent intent = new Intent();
         intent.setType("image/*");
-        intent.putExtra(Intent.EXTRA_STREAM, Uri.parse(path));
+        intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(path)));
         intent.setAction(Intent.ACTION_SEND);
         context.startActivity(Intent.createChooser(intent, "Chia sẻ"));
     }
@@ -41,7 +43,7 @@ public class ShareUtil {
         if (path == null || path.equals("")) return;
         Intent sendIntent = new Intent();
         sendIntent.setType("video/*");
-        sendIntent.putExtra(Intent.EXTRA_STREAM, (Uri.parse(path)));
+        sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(path)));
         sendIntent.setAction(Intent.ACTION_SEND);
         context.startActivity(Intent.createChooser(sendIntent, "Chia sẻ"));
     }
