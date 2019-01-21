@@ -7,6 +7,7 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.regex.Pattern;
 
 public class FileUtil {
     public static String getFileSize(Context context, String path){
@@ -22,5 +23,12 @@ public class FileUtil {
         return format.format(new Date(file.lastModified()));
     }
 
+    public static boolean isFilenameSafe(String name){
+        String[] splitSpace = name.trim().split("\\s+");
+        for(String sc : splitSpace){
+            if (!Pattern.compile("[\\w%+,./=_-]+").matcher(sc).matches()) return false;
+        }
+        return true;
+    }
 
 }
