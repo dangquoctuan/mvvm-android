@@ -1,0 +1,28 @@
+<template format="4"
+		revision="1"
+		name="MVVM Template"
+		description="Creates a new MVVM template. Code by TuanDQ.">
+
+	<category value="Other"/>
+
+	<parameter 
+		id="className"
+		name="Functionality Name"
+		type="string"
+		constraints="class|unique|nonempty"
+		default="Home"
+		help="The name of the functionality that requires MVVM module"/>
+		
+	<parameter
+        id="layoutName"
+        name="Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="fragment_${classToResource(className)}"
+        default="fragment_home"
+        help="The name of the layout to create for the fragment" />
+
+	<globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
