@@ -1,7 +1,7 @@
 package com.htstudio.core.activity;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.WindowManager;
 
 import com.htstudio.core.R;

@@ -4,13 +4,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="55dp">
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:visibility="gone"
         android:id="@+id/layoutHeader"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/left_icon"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -30,7 +30,7 @@
             android:gravity="center"
             />
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/right_icon"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -40,9 +40,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/searchLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -77,7 +77,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/cancel"
             />
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:padding="10dp"
@@ -87,7 +87,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/edit_search"
             app:srcCompat="@drawable/ic_search"
             />
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:padding="10dp"
             app:srcCompat="@drawable/ic_clear"
             android:layout_width="0dp"
@@ -98,5 +98,5 @@
             app:layout_constraintBottom_toBottomOf="@+id/edit_search"
             />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
